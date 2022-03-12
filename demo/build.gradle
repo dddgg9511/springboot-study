@@ -17,6 +17,7 @@ dependencies {
     implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.2'
     implementation 'org.webjars.bower:jquery:3.6.0'
     implementation 'org.webjars:webjars-locator-core:0.50'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation group: 'org.springframework.boot', name: 'spring-boot-test-autoconfigure', version: '2.6.4'
 }
