@@ -3,7 +3,6 @@ package com.example.springdata;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
-import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
@@ -12,7 +11,7 @@ import java.sql.Connection;
 import java.sql.Statement;
 
 @Component
-public class H2Runner implements ApplicationRunner {
+public class MysqlRunner implements ApplicationRunner {
     @Autowired
     DataSource dataSource;
 
@@ -22,6 +21,7 @@ public class H2Runner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         try(Connection connection = dataSource.getConnection()){
+            System.out.println(dataSource.getClass());
             System.out.println(connection.getMetaData().getURL());
             System.out.println(connection.getMetaData().getUserName());
 
